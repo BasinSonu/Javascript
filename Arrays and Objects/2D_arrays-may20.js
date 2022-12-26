@@ -72,15 +72,40 @@
 */
 
 
-let arr=[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20],[21,22,23,24,25]];
-let count1=1,count2=1
-let row=arr.length,col=arr[0].length;
-for(i=0;i<count1;i++){
-    for(j=0;j<col;j++){
-    console.log(arr[i][j]);
-    if(j=col-1){
+// let arr=[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20],[21,22,23,24,25]];
+// let count1=1,count2=1
+// let row=arr.length,col=arr[0].length;
+// for(i=0;i<count1;i++){
+//     for(j=0;j<col;j++){
+//     console.log(arr[i][j]);
+//     if(j=col-1){
         
+//     }
+// }
+// }
+// console.log(arr[0].length);
+
+
+/*********************************************************************************************************/
+
+/*                                 1  2  3  4  5
+                                   6  7  8  9  10
+                                   11 12 13 14 15
+                                   16 17 18 19 20
+                                   21 22 23 24 25 
+                            
+*/
+
+let startingrow=0, startingcol=0, totalrow=5, totalcol=5;
+let arr=[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20],[21,22,23,24,25]];
+while(startingrow<totalrow && startingcol<totalcol){
+    for(i=0;i<totalrow;i++){
+        console.log(arr[i][startingcol]);
+    }
+    startingcol++;
+    if(i==5){
+        for(i=totalrow-1;i>=0;i--){
+            console.log(arr[i][startingcol]);
+        }
     }
 }
-}
-// console.log(arr[0].length);
