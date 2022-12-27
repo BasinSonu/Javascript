@@ -46,19 +46,41 @@
 
 
 // arr=[[5,8,9],[4,2,9],[10,13,15]];
-function sumofupperandlowerdiagonalelements(arr){
-let totalrow=3, totalcol=3, upper=0, lower=0;
+// function sumofupperandlowerdiagonalelements(arr){
+// let totalrow=3, totalcol=3, upper=0, lower=0;
+// for(i=0;i<totalrow;i++){
+//     for(j=0;j<totalcol;j++){
+//         if(i>=j){
+//             lower+=arr[i][j];
+//         }
+//         if(i<=j){
+//             upper+=arr[i][j];
+//         }
+//     }
+// }
+// console.log("sum of upper diagonal elements is "+upper);
+// console.log("sum of lower diagonal elements is "+lower);
+// }
+// sumofupperandlowerdiagonalelements(arr=[[5,7,9],[4,3,9],[10,18,15]]);
+
+
+/********************************** Sparse Matrix **************************************/
+
+
+arr=[[5,0,0],[4,0,9],[10,0,0]];
+let totalrow=3, totalcol=3, zerocount=0, nonzerocount=0;
 for(i=0;i<totalrow;i++){
     for(j=0;j<totalcol;j++){
-        if(i>=j){
-            lower+=arr[i][j];
+        if(arr[i][j]==0){
+            zerocount++;
         }
-        if(i<=j){
-            upper+=arr[i][j];
+        else{
+            nonzerocount++;
         }
     }
 }
-console.log("sum of upper diagonal elements is "+upper);
-console.log("sum of lower diagonal elements is "+lower);
+if(zerocount > nonzerocount){
+    console.log("Its a sparse matrix");
+}else{
+    console.log("Not a sparse matrix");
 }
-sumofupperandlowerdiagonalelements(arr=[[5,8,9],[4,2,9],[10,13,15]]);
