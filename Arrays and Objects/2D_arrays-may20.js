@@ -86,7 +86,7 @@
 // console.log(arr[0].length);
 
 
-/*********************************************************************************************************/
+/************************************************** Printing in waves form *******************************************************/
 
 /*                                 1  2  3  4  5
                                    6  7  8  9  10
@@ -96,16 +96,80 @@
                             
 */
 
-let startingrow=0, startingcol=0, totalrow=5, totalcol=5;
-let arr=[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20],[21,22,23,24,25]];
-// while(startingrow<totalrow && startingcol<totalcol){
+// let startingrow=0, startingcol=0, totalrow=5, totalcol=5;
+// let arr=[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20],[21,22,23,24,25]];
+// // while(startingrow<totalrow && startingcol<totalcol){
 
 
-if(startingcol<totalcol){
-    for(i=0;i<totalrow;i++){
-        console.log(arr[i][startingcol]);
-        startingrow++;
-    }startingcol++;
-}console.log(startingcol);
+// if(startingcol<totalcol){
+//     for(i=0;i<totalrow;i++){
+//         console.log(arr[i][startingcol]);
+//         startingrow++;
+//     }startingcol++;
+// }console.log(startingcol);
 
 
+/*****************************************************************second attempt  *********************************************************/
+/*                                 1  2  3  4  5
+                                   6  7  8  9  10
+                                   11 12 13 14 15
+                                   16 17 18 19 20
+                                   21 22 23 24 25 
+
+
+                                    1  2  3   4   5   6   7
+                 0                  8  9  10  11  12  13  14
+                                    15 16 17  18  19  20  21
+                                    22 23 24  25  26  27  28
+                            
+*/
+
+// let arr=[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20],[21,22,23,24,25]];
+// let row=0, col=0, totalrow=4, totalcol=4;
+// while(col<=totalcol){
+//     if(row%2==0){
+//     for(j=0;j<=totalrow;j++){
+//         console.log(arr[j][row]);
+//     }
+// }
+//     if(row%2 != 0){
+//     for(j=totalrow;j>=0;j--){
+//         console.log(arr[j][row]);
+//     }
+// }
+//     row++
+//     col++;
+// }
+
+/*****************Solution correct******************/
+
+/*
+
+                                    1  2  3   4   5   6   7
+                                    8  9  10  11  12  13  14
+                                    15 16 17  18  19  20  21
+                                    22 23 24  25  26  27  28
+                                    
+                                    */
+
+let arr=[[1,2,3,4,5,6,7],[8,9,10,11,12,13,14],[15,16,17,18,19,20,21],[22,23,24,25,26,27,28]];
+
+let totalrow=4, totalcol=7;
+let col=0, row=0;
+while(col<totalcol){
+    if(col%2==0){
+        for(i=0;i<totalrow;i++){
+            console.log(arr[i][col]);
+        }
+    }
+    if(col%2 !=0){
+        for(i=totalrow-1;i>=0;i--){
+        console.log(arr[i][col]);
+        }
+    }
+col++;
+}
+
+console.log("hence proved");
+
+/************************************************************************* */
