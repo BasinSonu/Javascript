@@ -30,27 +30,27 @@
 
 // console.log(reverseofnumber(32568));
 
-/******************************************************************************/
-
+/**************************************************** First letter of every word to uppercase ************************************************/
+let arr=[],arr1=[],word,word1,word2=[];
 function firstletterlettertouppercase(words){
-    console.log(words);
-    words=words+"";
-    console.log(words);
-    let arr=words.split(" ");
-    console.log(arr);
-    console.log(arr.length);
-    for(i=0;i<arr.length;i++){
-        let word=arr[i];
-        console.log(word);
-        let arr1=word.split("");
-        console.log(arr1);
-        for(j=0;j<1;j++){
-            arr1=arr1[j].toUpperCase();
-            
-        }console.log(arr1);
-
-    }
+        arr=words.split(" ");
+        for(i=0;i<arr.length;i++){
+            word=arr[i];
+            arr1=word.split("");
+            for(j=0;j<arr1.length;j++){
+                if(j==0){
+                    word1=arr1[j].toUpperCase();
+                }else{
+                    word1=word1+arr1[j];
+                }
+            }
+            word2=word2+word1+" ";
+        }
+        console.log(word2);
 
 }
 
-firstletterlettertouppercase("the quick brown fox");
+firstletterlettertouppercase("basim is a good boy and he is very good looking");
+
+
+/******************************************************* */

@@ -1,7 +1,3 @@
-function printUpperCase(letter){
-//     let upper=letter.toUpperCase();
-//     return upper;
-// }
-
-// let a=(printUpperCase("basim"));
-// console.log(a);
+for(i=0;i<arr.length;i++){
+        arr1=arr1+arr.split("");
+    }console.log(arr1);
